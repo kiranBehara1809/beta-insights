@@ -2,10 +2,17 @@ import React, { useState } from "react";
 import CustomHeaderWithSearchBar from "../../common/components/customHeaderWithSearchBar";
 import EnhancedTable from "../../common/components/customTable";
 import { intToRoman } from "../../common/functions/function";
-import { FUND_ANALYSIS_ICON, FUND_INSIGHTS_ICON, FUND_REVIEW_ICON } from "../../constants/icons";
+import {
+  FUND_ANALYSIS_ICON,
+  FUND_ANALYSIS_RISK_ICON,
+  FUND_INSIGHTS_ICON,
+  FUND_REVIEW_ICON,
+} from "../../constants/icons";
+import UnderDev from "../../common/components/underDev";
 import { Box, Grid, Tab, Tabs } from "@mui/material";
 import { faker } from "@faker-js/faker";
 import FundReview from "./fundReview";
+import FundRiskAnalysis from "./fundRiskAnalysis/fundRiskAnalysis";
 
 const COLUMNS = [
   {
@@ -154,6 +161,11 @@ const FundAnalysis = () => {
           iconPosition="start"
           label="Fund Insights (Patterns & Observations)"
         />
+        <Tab
+          icon={FUND_ANALYSIS_RISK_ICON}
+          iconPosition="start"
+          label="Fund Risk Analysis"
+        />
       </Tabs>
       <Box sx={{ mt: 2 }}>
         {tabValue === 0 && (
@@ -183,6 +195,8 @@ const FundAnalysis = () => {
           </>
         )}
         {tabValue === 1 && <FundReview />}
+        {tabValue === 2 && <UnderDev />}
+        {tabValue === 3 && <FundRiskAnalysis />}
       </Box>
     </>
   );

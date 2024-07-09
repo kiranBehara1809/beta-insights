@@ -57,6 +57,9 @@ import { FaMoneyBillTrendUp } from "react-icons/fa6";
 import { VscPreview } from "react-icons/vsc";
 import { SiPagespeedinsights } from "react-icons/si";
 import { IoInformationCircleSharp } from "react-icons/io5";
+import { GiTakeMyMoney } from "react-icons/gi";
+
+
 
 const SETTINGS_ICON = (
   <SettingsIcon fontSize="large" sx={{ color: "primary.main" }} />
@@ -70,6 +73,7 @@ const TABLE_HEAD_INFO_ICON = (
   />
 );
 const MARKET_OUTLOOK_ICON = <HiRectangleGroup className="reactIconsColor" />;
+const FUND_ANALYSIS_RISK_ICON = <GiTakeMyMoney className="reactIconsColor" />;
 const SEARCH_ICON = <FaSearch className="reactIconsColor" />;
 const FUND_REVIEW_ICON = <VscPreview className="reactIconsColor" />;
 const FUND_INSIGHTS_ICON = <SiPagespeedinsights className="reactIconsColor" />;
@@ -229,4 +233,5 @@ export {
   FONT_SIZE_ICON,
   UNDER_DEV_ICON,
   SEARCH_ICON,
+  FUND_ANALYSIS_RISK_ICON,
 };

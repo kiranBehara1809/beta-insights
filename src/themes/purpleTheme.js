@@ -50,13 +50,6 @@ export const purpleTheme = createTheme({
         },
       },
     },
-    MuiTab: {
-      styleOverrides: {
-        root: {
-          textTransform: "capitalize !important",
-        },
-      },
-    },
     MuiButton: {
       defaultProps: {
         sx: {
