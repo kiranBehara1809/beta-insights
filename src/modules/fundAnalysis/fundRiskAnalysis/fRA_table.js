@@ -58,7 +58,7 @@ const FRA_TABLE = ({
                     <StyledTableCell
                       align="center"
                       colSpan={one.colSpan}
-                      key={one.id}
+                      key={`${one.id}_${crypto.randomUUID()}`}
                       sx={{
                         ...one.sx,
                         fontWeight: "bold",
@@ -74,6 +74,7 @@ const FRA_TABLE = ({
                     return (
                       <Tooltip
                         arrow
+                        key={`${two.id}_${crypto.randomUUID()}`}
                         title={
                           two.hasOwnProperty("tooltip") ? (
                             <Typography variant="body2">
@@ -106,7 +107,7 @@ const FRA_TABLE = ({
                       <StyledTableCell
                         align="center"
                         colSpan={three.colSpan}
-                        key={three.id}
+                        key={`${three.id}_${crypto.randomUUID()}`}
                         sx={{
                           ...three.sx,
                           fontWeight: "bold",
@@ -120,6 +121,7 @@ const FRA_TABLE = ({
               <TableRow>
                 {levelFourColumns?.map((column) => (
                   <Tooltip
+                    key={`${column.id}_${crypto.randomUUID()}`}
                     arrow
                     title={
                       column.hasOwnProperty("tooltip") &&
@@ -131,7 +133,6 @@ const FRA_TABLE = ({
                         ""
                       )
                     }
-                    key={column.id}
                   >
                     <StyledTableCell
                       sx={{
@@ -152,7 +153,11 @@ const FRA_TABLE = ({
             <TableBody>
               {tableData?.length === 0 && (
                 <TableRow>
-                  <TableCell>No Data Found</TableCell>
+                  <TableCell colSpan={5}>
+                    <Typography variant="body2" sx={{ color: "red" }}>
+                      No Data Found
+                    </Typography>
+                  </TableCell>
                 </TableRow>
               )}
               {visibleRows?.map((row, index) => {

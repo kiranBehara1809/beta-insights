@@ -4,9 +4,11 @@ import EnhancedTable from "../../common/components/customTable";
 import { intToRoman } from "../../common/functions/function";
 import {
   FUND_ANALYSIS_ICON,
+  FUND_ANALYSIS_RISK_ICON,
   FUND_INSIGHTS_ICON,
   FUND_REVIEW_ICON,
 } from "../../constants/icons";
+import UnderDev from "../../common/components/underDev";
 import { Box, Grid, Tab, Tabs } from "@mui/material";
 import { faker } from "@faker-js/faker";
 import FundReview from "./fundReview";
@@ -160,7 +162,7 @@ const FundAnalysis = () => {
           label="Fund Insights (Patterns & Observations)"
         />
         <Tab
-          icon={FUND_INSIGHTS_ICON}
+          icon={FUND_ANALYSIS_RISK_ICON}
           iconPosition="start"
           label="Fund Risk Analysis"
         />
@@ -193,6 +195,7 @@ const FundAnalysis = () => {
           </>
         )}
         {tabValue === 1 && <FundReview />}
+        {tabValue === 2 && <UnderDev />}
         {tabValue === 3 && <FundRiskAnalysis />}
       </Box>
     </>
