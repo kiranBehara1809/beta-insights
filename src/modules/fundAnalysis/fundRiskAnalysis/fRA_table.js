@@ -62,11 +62,6 @@ const FRA_TABLE = ({
                       sx={{
                         ...one.sx,
                         fontWeight: "bold",
-                        color: `${theme.palette.primary.main} !important`,
-                        background: alpha(
-                          theme.palette.primary.main,
-                          theme.palette.action.activatedOpacity
-                        ),
                       }}
                     >
                       {one.label}
@@ -96,11 +91,6 @@ const FRA_TABLE = ({
                           sx={{
                             ...two.sx,
                             fontWeight: "bold",
-                            color: `${theme.palette.primary.main} !important`,
-                            background: alpha(
-                              theme.palette.primary.main,
-                              theme.palette.action.activatedOpacity
-                            ),
                           }}
                         >
                           {two.label}
@@ -120,11 +110,6 @@ const FRA_TABLE = ({
                         sx={{
                           ...three.sx,
                           fontWeight: "bold",
-                          color: `${theme.palette.primary.main} !important`,
-                          background: alpha(
-                            theme.palette.primary.main,
-                            theme.palette.action.activatedOpacity
-                          ),
                         }}
                       >
                         {three.label}
@@ -153,11 +138,6 @@ const FRA_TABLE = ({
                         ...column.sx,
                         minWidth: column.minWidth,
                         fontWeight: "bold",
-                        color: `${theme.palette.primary.main} !important`,
-                        background: alpha(
-                          theme.palette.primary.main,
-                          theme.palette.action.activatedOpacity
-                        ),
                       }}
                     >
                       {column.label}

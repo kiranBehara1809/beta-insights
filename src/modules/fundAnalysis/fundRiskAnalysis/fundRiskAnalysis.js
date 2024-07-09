@@ -11,7 +11,7 @@ import { AMC_LIST } from "../../../db/fundAnalysis/fundReviewDb";
 import { useTheme } from "@mui/material";
 
 const FundRiskAnalysis = () => {
-  const theme = useTheme()
+  const theme = useTheme();
   const years = [
     2010, 2011, 2012, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022,
     2023, 2024,
@@ -53,12 +53,12 @@ const FundRiskAnalysis = () => {
           }),
         ];
         return {
-          empty_one: `${faker.date.month({ abbreviated: true })}-${
+          as_of_portfolio_date: `${faker.date.month({ abbreviated: true })}-${
             years[Math.floor(Math.random() * years.length)]
           }`,
-          empty_two:
+          schema_name:
             AMC_LIST[Math.floor(Math.random() * AMC_LIST.length)]?.label,
-          empty_three: faker.finance.amount({
+          aum_amount_in_cr: faker.finance.amount({
             min: 5,
             max: 50000,
             dec: 2,
@@ -90,7 +90,7 @@ const FundRiskAnalysis = () => {
         levelFourColumns={LEVEL_FOUR_COLUMS}
         tableData={data}
         rowsPerPage={15}
-        maxHeight={"500px"}
+        maxHeight={"640px"}
       />
     </>
   );
